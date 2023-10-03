@@ -57,7 +57,7 @@ class wog_setup(object):
             if user_game_level.lower() == 'exit': sys.exit()
             if user_game_level.isdigit() and 1 <= (level := int(user_game_level)) <= 5: print(f"Selected level: {level}"); break
             print(f"{f'{user_game_level} is not it the range between 1 and 5' if user_game_level.isdigit() else 'Enter a number, not a stirng'}")
-
+        global chosen_game
         chosen_game = str(list_of_games[int(user_game_choice)-1].split(".")[1].split("-")[0]).strip().replace(" ","_").lower()
         globals()[chosen_game](int(user_game_level))
 

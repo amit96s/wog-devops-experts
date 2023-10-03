@@ -1,6 +1,7 @@
 import sys
 import yfinance as yf
 from random import randint
+from score import add_score
 
 def currency_roulette(difficulty_level):
     randon_number = randint(1, 300)
@@ -16,7 +17,9 @@ def currency_roulette(difficulty_level):
             user_guess = int(user_guess)
 
             if abs(user_guess - amount_in_ils) <= int(6-difficulty_level):
-                print(f"Well done!\nIt took you {guesses_number} guesses\nCurrency rate USD/ILS is: {cuurency_rate}");break
+                print(f"Well done!\nIt took you {guesses_number} guesses\nCurrency rate USD/ILS is: {cuurency_rate}")
+                add_score(difficulty_level)
+                break
 
             print("your guess is too high" if user_guess > amount_in_ils else ("your guess is too small" if user_guess < amount_in_ils else "")); guesses_number += 1
 
