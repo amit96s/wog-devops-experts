@@ -6,10 +6,10 @@ from selenium.webdriver.common.by import By
 import sys
 
 def test_scores_service():
-    url = input("URL: ")
+    url = "http://localhost"
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--headless')
-    driver_path = Service(r'C:\Users\amits\OneDrive\שולחן העבודה\DEVOPS - EXPERTS/chromedriver.exe')
+    driver_path = Service(r'C:\Users\amits\OneDrive\שולחן העבודה\chromedriver.exe')
     driver = webdriver.Chrome(service=driver_path, options=chrome_options)
 
     driver.get(url)
@@ -25,3 +25,5 @@ def test_scores_service():
 
 def main_function():
     return -1 if not test_scores_service() else 0
+
+test_scores_service(),print(main_function())
