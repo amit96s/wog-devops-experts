@@ -26,4 +26,4 @@ def test_scores_service():
 def main_function():
     return -1 if not test_scores_service() else 0
 
-test_scores_service(),main_function()
+test_scores_service(),print(main_function())
