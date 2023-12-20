@@ -27,7 +27,7 @@ pipeline {
                         // Check the exit code and proceed accordingly
                         if (e2eExitCode == 0) {
                             echo 'good'
-                            bat 'docker login -u amit1shemesh -p A1598741a!'
+                            bat 'docker login -u *** -p ***'
                             bat 'docker tag wog_amit_shemesh:1.0 amit1shemesh/wog_amit_shemesh:1.0'
                             bat 'docker push amit1shemesh/wog_amit_shemesh:1.0'
                             // Tests passed, tag and push the image
